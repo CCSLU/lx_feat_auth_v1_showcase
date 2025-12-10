@@ -5,7 +5,8 @@ import { createClient } from "@/lib/supabase/server";
 
 export default async function getAllUserOrgs() {
   const supabase = await createClient();
-  const { data, error } = await supabase.from();
+  // TODO: Implement organization fetching when table and user logic is ready
+  return [];
 }
 
 // export default async function getAllUserOrgs() {

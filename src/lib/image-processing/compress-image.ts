@@ -57,6 +57,11 @@ const cropImageToSquare = async (file: File): Promise<File> => {
 
     img.onload = () => {
       try {
+        if (!ctx) {
+          reject(new Error("Error al obtener el contexto del canvas"));
+          return;
+        }
+
         // Determinar el tamaño del cuadrado (el lado más pequeño)
         const size = Math.min(img.width, img.height);
 
